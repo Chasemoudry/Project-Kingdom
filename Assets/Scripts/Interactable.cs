@@ -3,14 +3,21 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider)), DisallowMultipleComponent]
-public class Interactable : MonoBehaviour
+public sealed class Interactable : MonoBehaviour
 {
-    [SerializeField]
-    private BubbleObject _bubbleObject;
+    public bool IsInteractable { get { return _isInteractable; } }
+
+    public BubbleObject BubbleObject;
 
     [Header("Interaction Event")]
     [SerializeField]
+    private bool _alwaysShow = false;
+    [SerializeField]
+    private bool _isInteractable = true;
+    [SerializeField]
     private BubbleObject _interactRequirement;
+    [SerializeField]
+    private BubbleObject _objectToGive;
     [SerializeField]
     private UnityEvent _onInteract;
 
@@ -23,41 +30,72 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Move bubble
-        if (this._bubbleObject.IsThoughtBubble)
+        if (this._isInteractable == false && this._alwaysShow == false)
         {
-            BubbleRenderer.SetPosition(other.transform.position + this._bubbleObject.Offset);
+            BubbleRenderer.SetVisibility(false);
+            return;
+        }
+
+        // Move bubble
+        if (this.BubbleObject.IsThoughtBubble)
+        {
+            BubbleRenderer.SetPosition(other.transform.position + this.BubbleObject.Offset);
         }
         else
         {
             BubbleRenderer.SetPosition(this.transform.position
                 + new Vector3(0, this._collider.bounds.extents.y, 0)
-                + this._bubbleObject.Offset);
+                + this.BubbleObject.Offset);
         }
-        BubbleRenderer.SetSprite(this._bubbleObject.BubbleSprite);
+        BubbleRenderer.SetSprite(this.BubbleObject.BubbleSprite);
         // Enable bubble
         BubbleRenderer.SetVisibility(true);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (this._bubbleObject.IsThoughtBubble)
+        if (this._isInteractable == false && this._alwaysShow == false)
         {
-            BubbleRenderer.SetPosition(other.transform.position + this._bubbleObject.Offset);
+            BubbleRenderer.SetVisibility(false);
+            return;
+        }
+
+        if (this.BubbleObject.IsThoughtBubble)
+        {
+            BubbleRenderer.SetPosition(other.transform.position + this.BubbleObject.Offset);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if (this._isInteractable == false && this._alwaysShow == false)
+        {
+            BubbleRenderer.SetVisibility(false);
+            return;
+        }
+
         // Disable bubble 
         BubbleRenderer.SetVisibility(false);
     }
 
-    public virtual void Interact(BubbleObject[] objects)
+    public void SetIsInteractable(bool isInteractable)
     {
-        if (objects.Contains(this._interactRequirement))
+        this._isInteractable = isInteractable;
+    }
+
+    public void Interact(Movement player)
+    {
+        if (this._interactRequirement != null && !player.Objects.Contains(this._interactRequirement))
         {
-            this._onInteract.Invoke();
+            return;
         }
+        else
+        {
+            player.RemoveObjectFromInventory(this._interactRequirement);
+        }
+
+        player.AddObjectToInventory(this._objectToGive);
+        this.SetIsInteractable(false);
+        this._onInteract.Invoke();
     }
 }
