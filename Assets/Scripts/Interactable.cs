@@ -1,10 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider)), DisallowMultipleComponent]
 public class Interactable : MonoBehaviour
 {
     [SerializeField]
     private BubbleObject _bubbleObject;
+
+    [Header("Interaction Event")]
+    [SerializeField]
+    private BubbleObject _interactRequirement;
+    [SerializeField]
+    private UnityEvent _onInteract;
 
     private Collider _collider;
 
@@ -38,10 +46,18 @@ public class Interactable : MonoBehaviour
             BubbleRenderer.SetPosition(other.transform.position + this._bubbleObject.Offset);
         }
     }
-    
+
     private void OnTriggerExit(Collider other)
     {
         // Disable bubble 
         BubbleRenderer.SetVisibility(false);
+    }
+
+    public virtual void Interact(BubbleObject[] objects)
+    {
+        if (objects.Contains(this._interactRequirement))
+        {
+            this._onInteract.Invoke();
+        }
     }
 }
