@@ -68,3 +68,4 @@ sysinfo.txt
 
 # Whitelist
 !Assets/*/[Tt]emp/
+ProjectSettings/ProjectVersion.txt
