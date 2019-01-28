@@ -98,4 +98,9 @@ public sealed class Interactable : MonoBehaviour
         this.SetIsInteractable(false);
         this._onInteract.Invoke();
     }
+
+    public void SetGameComplete()
+    {
+        PlayerPrefs.SetInt("Complete?", 1);
+    }
 }

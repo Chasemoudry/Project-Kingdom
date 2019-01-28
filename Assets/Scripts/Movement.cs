@@ -24,7 +24,12 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F12))
         {
+            MainMenu.BigReset();
             //Hard reset game state
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
 
         if (this._canBeControlled == false)
@@ -82,5 +87,10 @@ public class Movement : MonoBehaviour
     public void RemoveObjectFromInventory(BubbleObject targetObject)
     {
         this.Objects.Remove(targetObject);
+    }
+
+    public void SetCanBeControlled(bool canBeControlled)
+    {
+        this._canBeControlled = canBeControlled;
     }
 }
