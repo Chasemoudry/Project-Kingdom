@@ -46,6 +46,7 @@ public class MainMenu : MonoBehaviour
 
     public static void SetCompletion()
     {
+		Main.gameObject.SetActive(true);
         Main._introImage.sprite = Main._completionSprite;
     }
 

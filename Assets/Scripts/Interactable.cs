@@ -44,7 +44,7 @@ public sealed class Interactable : MonoBehaviour
         else
         {
             BubbleRenderer.SetPosition(this.transform.position
-                + new Vector3(0, this._collider.bounds.extents.y, 0)
+                //+ new Vector3(0, this._collider.bounds.extents.y, 0)
                 + this.BubbleObject.Offset);
         }
         BubbleRenderer.SetSprite(this.BubbleObject.BubbleSprite);

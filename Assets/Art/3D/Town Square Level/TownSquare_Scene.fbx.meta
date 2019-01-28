@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: c09d20f2e66b0a84d883283b7da4bfdd
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: anvil
+    100002: barrel
+    100004: blacksmithTable
+    100006: Box053
+    100008: Box054
+    100010: Box055
+    100012: Box056
+    100014: castleWall
+    100016: castleWall2
+    100018: cobblesFountain
+    100020: cobblesFountain1
+    100022: cobblesRoad
+    100024: drawbridge
+    100026: drawbridgeFrame
+    100028: forge
+    100030: fountain
+    100032: ground
+    100034: heightRef
+    100036: leverBase
+    100038: shelter
+    100040: tower
+    100042: //RootNode
+    400000: anvil
+    400002: barrel
+    400004: blacksmithTable
+    400006: Box053
+    400008: Box054
+    400010: Box055
+    400012: Box056
+    400014: castleWall
+    400016: castleWall2
+    400018: cobblesFountain
+    400020: cobblesFountain1
+    400022: cobblesRoad
+    400024: drawbridge
+    400026: drawbridgeFrame
+    400028: forge
+    400030: fountain
+    400032: ground
+    400034: heightRef
+    400036: leverBase
+    400038: shelter
+    400040: tower
+    400042: //RootNode
+    2100000: MaterialSheet
+    2100002: 'Material #24'
+    2300000: anvil
+    2300002: barrel
+    2300004: blacksmithTable
+    2300006: Box053
+    2300008: Box054
+    2300010: Box055
+    2300012: Box056
+    2300014: castleWall
+    2300016: castleWall2
+    2300018: cobblesFountain
+    2300020: cobblesFountain1
+    2300022: cobblesRoad
+    2300024: drawbridge
+    2300026: drawbridgeFrame
+    2300028: forge
+    2300030: fountain
+    2300032: ground
+    2300034: heightRef
+    2300036: leverBase
+    2300038: shelter
+    2300040: tower
+    3300000: anvil
+    3300002: barrel
+    3300004: blacksmithTable
+    3300006: Box053
+    3300008: Box054
+    3300010: Box055
+    3300012: Box056
+    3300014: castleWall
+    3300016: castleWall2
+    3300018: cobblesFountain
+    3300020: cobblesFountain1
+    3300022: cobblesRoad
+    3300024: drawbridge
+    3300026: drawbridgeFrame
+    3300028: forge
+    3300030: fountain
+    3300032: ground
+    3300034: heightRef
+    3300036: leverBase
+    3300038: shelter
+    3300040: tower
+    4300000: heightRef
+    4300002: ground
+    4300004: fountain
+    4300006: castleWall2
+    4300008: castleWall
+    4300010: drawbridgeFrame
+    4300012: tower
+    4300014: leverBase
+    4300016: drawbridge
+    4300018: blacksmithTable
+    4300020: anvil
+    4300022: forge
+    4300024: shelter
+    4300026: barrel
+    4300028: Box053
+    4300030: Box054
+    4300032: Box055
+    4300034: Box056
+    4300036: cobblesFountain
+    4300038: cobblesFountain1
+    4300040: cobblesRoad
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07857431b01fb5a43b2fc27110aa44fb, type: 3}
+  m_Name: Broken Sticks
+  m_EditorClassIdentifier: 
+  _bubbleSprite: {fileID: 21300018, guid: 231d801e148da0b48acef6682dae2364, type: 3}
+  _bubbleOffset: {x: 0, y: 0, z: 0}
+  _isThoughtBubble: 0

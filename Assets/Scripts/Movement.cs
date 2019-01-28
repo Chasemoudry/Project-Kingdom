@@ -31,6 +31,11 @@ public class Movement : MonoBehaviour
         {
             Application.Quit();
         }
+		if (Input.GetKeyDown(KeyCode.F11)) {
+			PlayerPrefs.SetInt("Complete?", 1);
+			this.SetCanBeControlled(false);
+			MainMenu.SetCompletion();
+		}
 
         if (this._canBeControlled == false)
         {
@@ -49,7 +54,7 @@ public class Movement : MonoBehaviour
 
         //Switches movement to worldSpace from localSpace
         this._controller.SimpleMove(Vector3.ClampMagnitude(
-            this.transform.InverseTransformDirection(new Vector3(h, 0, v)), 1) * (moveSpeed * 2f));
+            this.transform.InverseTransformDirection(new Vector3(h, 0, v)), 1) * (moveSpeed * 4f));
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

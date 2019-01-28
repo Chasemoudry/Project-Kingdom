@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: TEST_PlanksObject
   m_EditorClassIdentifier: 
   _bubbleSprite: {fileID: 21300004, guid: 231d801e148da0b48acef6682dae2364, type: 3}
-  _bubbleOffset: {x: 0, y: 0.5, z: 0}
+  _bubbleOffset: {x: 0, y: 0, z: 0}
   _isThoughtBubble: 0
